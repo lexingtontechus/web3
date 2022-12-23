@@ -9,12 +9,19 @@
     "export": "next export"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.7",
+    "@thirdweb-dev/react": "^3.6.8",
+    "@thirdweb-dev/sdk": "^3.6.8",
     "@uauth/web3-react": "^2.4.1-rc.0",
     "@walletconnect/ethereum-provider": "^2.1.4",
     "@web3-react/core": "^8.0.35-beta.0",
     "@web3-react/metamask": "^8.0.28-beta.0",
     "@web3-react/walletconnect": "^8.0.36-beta.0",
+    "ethers": "^5.7.2",
     "next": "latest",
+    "next-auth": "^4.18.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "turbopack": "0.0.1"
