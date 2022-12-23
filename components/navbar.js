@@ -1,10 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import { ConnectWallet } from "@thirdweb-dev/react";
 
@@ -17,7 +13,7 @@ const Navbar = () => {
             <div className="flex flex-shrink-0 items-center">
               <Link
                 href="/"
-                className="inline-flex h-content w-auto fill-trueZinc-900 dark:fill-trueZinc-100 stroke-2"
+                className="inline-flex h-content w-auto fill-trueZinc-100 dark:fill-trueZinc-100 stroke-2"
               >
                 <Logo />
               </Link>
