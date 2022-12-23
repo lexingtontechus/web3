@@ -1,4 +1,4 @@
-import styles from '../styles/Footer.module.scss';
+import styles from '../styles/Signup.module.scss';
 
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';

@@ -4,7 +4,8 @@ import Navbar from "../components/navbar";
 import Main from "../components/main";
 import Hero from "../components/hero";
 import Team from "../components/team";
-import Footer from "../components/footer";
+import FAQs from "../components/faqs";
+import Signup from "../components/signup";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <Main />
       <Team />
-      <Footer />
+      <FAQs />
+      <Signup />
     </>
   );
 }
