@@ -1,13 +1,43 @@
-import { ThirdwebAuth } from "@thirdweb-dev/auth/next";
+import { ThirdwebAuth } from "@thirdweb-dev/auth/next"
+import { createClient } from "@supabase/supabase-js"
+
+export const supabase = createClient(
+  process.env.SUPABASE_URL || "",
+  process.env.SUPABASE_SERVICE_ROLE || ""
+)
 
 export const { ThirdwebAuthHandler, getUser } = ThirdwebAuth({
-  // Using environment variables to secure your private key is a security vulnerability.
-  // Learn how to store your private key securely:
-  // https://portal.thirdweb.com/sdk/set-up-the-sdk/securing-your-private-key
   privateKey: process.env.ADMIN_PRIVATE_KEY || "",
-  // Set this to your domain to prevent signature malleability attacks.
   domain: "localhost:3000",
-});
+  callbacks: {
+    login: async address => {
+      const { data: user } = await supabase
+        .from("users")
+        .select("*")
+        .eq("address", address.toLowerCase())
+        .single()
 
-// Export the handler to setup all your endpoints
-export default ThirdwebAuthHandler();
+      if (!user) {
+        const res = await supabase
+          .from("users")
+          .insert({ address: address.toLowerCase() })
+          .single()
+
+        if (res.error) {
+          throw new Error("Failed to create user!")
+        }
+      }
+    },
+    user: async address => {
+      const { data: user } = await supabase
+        .from("users")
+        .select("*")
+        .eq("address", address.toLowerCase())
+        .single()
+
+      return user
+    }
+  }
+})
+
+export default ThirdwebAuthHandler()
