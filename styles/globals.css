@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --w3o-background-color: #94a3b8;
+  --w3o-foreground-color: #ef4444;
+  --w3o-text-color: #020617;
+  --w3o-border-color: #6366f1;
+  --w3o-action-color: #6366f1;
+  --w3o-border-radius: "1";
+  /*--w3o-font-family: unset;*/
+}
