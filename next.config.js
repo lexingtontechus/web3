@@ -1,4 +1,5 @@
 /* @type {import('next').NextConfig} */
+
 const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
@@ -20,6 +21,7 @@ const nextConfig = {
     domains: ["storageapi.fleek.co"],
     loader: "custom",
   },
+  transpilePackages: ['@unstoppabledomains/ui-components'],
 };
 
 module.exports = nextConfig;

@@ -7,11 +7,11 @@ import { Providers } from "./providers";
 //import Cal from "./components/cal";
 export const metadata = {
   title: {
-    default: "Lexington BlockNative WEB3 Demo",
-    template: "%s | Lexington BlockNative WEB3 Demo",
+    default: "Lexington WEB3",
+    template: "%s | Lexington WEB3",
   },
   description:
-    "A Lexington WEB3 Demo built with NextJS + Onboard Block Native.",
+    "A Lexington WEB3 Demo built with Onboard Block Native & Push.",
 };
 
 export default function RootLayout({ children }) {

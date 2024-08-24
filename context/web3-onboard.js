@@ -2,12 +2,13 @@ import injectedModule from "@web3-onboard/injected-wallets";
 import coinbaseModule from "@web3-onboard/coinbase";
 import uauthModule from "@web3-onboard/uauth";
 import { init } from "@web3-onboard/react";
+import unstoppableResolution from '@web3-onboard/unstoppable-resolution'
 
 // Example key • Replace with your infura key
 const INFURA_KEY = process.env.infuraID;
 const uauthOptions = {
   clientID: "process.env.uauthID",
-  redirectUri: "process.env.redirectURI" || "https://8sw95w-3000.csb.app/",
+  redirectUri: "process.env.redirectURI" || "https://localhost:3000/",
   scope: "openid wallet messaging:notifications:optional",
   walletConnectProjectId: "process.env.projectID",
 };
@@ -49,6 +50,7 @@ export default init({
       rpcUrl: "https://matic-mainnet.chainstacklabs.com",
     },
   ],
+  unstoppableResolution,
   appMetadata: {
     // The name of your dApp
     name: "Lexington WEB3",
