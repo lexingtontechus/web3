@@ -1,6 +1,6 @@
-# WEB3 Blocknative Onboard
+# Lexington WEB3
 
-Base implementation with NextJS 14.
+WEB3 + Messaging
 
 ## 
 
@@ -14,8 +14,3 @@ Integrated with:
 
 [Unstoppable Domains](https://unstoppabledomains.com/)
 
-##
-
-[Rainbow Wallet](https://rainbow.me/)
-##
-[RainbowKit](https://rainbowkit.com/)

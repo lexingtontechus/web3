@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 //import PopupWidget from "./components/popupWidget";
 import OnBoard from "./components/onboard";
+//import Message from "./components/message";
+//import { ChatView, ChatWidget } from "@pushprotocol/uiweb";
+//import PushWidget from "./components/pushwidget";
+//import PushProfile from "./components/pushprofile";
 export default function Home() {
   return (
     <>
@@ -14,18 +19,15 @@ export default function Home() {
           <div className="max-w-2xl">
             <h1 className="mb-5 text-5xl font-bold uppercase">
               Lexington Tech <br />
-              WEB3 Demo
+              WEB3 Messaging
             </h1>
             <figure>
               <img className="p-2" src="/blocknative.svg" />
             </figure>
-            <p>
-              BlockNative WEB3 OnBoard Multi-Wallet and Multi-Chain
-              functionality features built-in modules for more than 35 unique
-              hardware, software and injected (browser extension) wallets.
-            </p>
-            <div className="py-4">
+
+            <div className="py-2">
               <OnBoard />
+              
             </div>
           </div>
         </div>

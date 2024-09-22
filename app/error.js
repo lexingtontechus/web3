@@ -1,10 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Error() {
-  const router = useRouter();
-
   return (
     <div className="hero min-h-screen">
       <div className="hero-content text-center">
@@ -20,12 +18,8 @@ export default function Error() {
             <span className="loading loading-infinity loading-lg text-warning"></span>
             <span className="loading loading-infinity loading-lg text-error"></span>
           </p>
-          <button
-            className="btn btn-primary"
-            type="button"
-            onClick={() => router.push("/")}
-          >
-            Home
+          <button className="btn btn-primary uppercase">
+            <Link href="/">Home</Link>
           </button>
         </div>
       </div>

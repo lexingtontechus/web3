@@ -21,7 +21,10 @@ const nextConfig = {
     domains: ["storageapi.fleek.co"],
     loader: "custom",
   },
-  transpilePackages: ['@unstoppabledomains/ui-components'],
+  transpilePackages: [
+    "@unstoppabledomains/ui-components",
+    "@web3-name-sdk/core",
+  ],
 };
 
 module.exports = nextConfig;

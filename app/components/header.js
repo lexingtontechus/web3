@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-//import { AiOutlineLogin } from "react-icons/ai";
+
 import Switch from "./switchtheme";
 
 const logoImage = ({ src, width, quality }) => {
@@ -12,11 +12,9 @@ const Header = () => (
   <div className="navbar flex justify-between px-4 whitespace-normal uppercase bg-base-200">
     <div className="flex-1">
       <div className="avatar">
-
         <Link href="/">
           <Logo />
         </Link>
-
       </div>
     </div>
     <div className="ml-2">
